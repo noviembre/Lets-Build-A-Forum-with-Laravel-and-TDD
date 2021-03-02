@@ -11,7 +11,7 @@ class ThreadsTest extends TestCase
     use DatabaseTransactions;
 
     /** @test */
-    public function a_user_can_browse_threads()
+    public function a_user_can_view_all_threads()
     {
         $thread = factory('App\Thread')->create();
 
