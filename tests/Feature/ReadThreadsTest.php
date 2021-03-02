@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
-class ThreadsTest extends TestCase
+class ReadThreadsTest extends TestCase
 {
 
     use DatabaseTransactions;
