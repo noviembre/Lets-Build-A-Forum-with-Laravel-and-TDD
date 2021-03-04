@@ -30,7 +30,7 @@ class ReadThreadsTest extends TestCase
     /** @test */
     function a_user_can_view_a_single_thread()
     {
-        $this->get('/threads/' . $this->thread->id)
+        $this->get($this->thread->path())
             ->assertSee($this->thread->title);
     }
 
@@ -45,7 +45,7 @@ class ReadThreadsTest extends TestCase
 
         // when we visit a thread page
         // then we should see the replies(only body)
-        $this->get('/threads/' . $this->thread->id)
+        $this->get($this->thread->path())
             ->assertSee($reply->body);
 
     }

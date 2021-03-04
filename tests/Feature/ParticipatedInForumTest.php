@@ -23,7 +23,7 @@ class ParticipatedInForumTest extends TestCase
 
         // when the user adds a reply to the thread
         $reply = factory('App\Reply')->create();
-        $this->post('/threads/' . $thread->id . '/replies', $reply->toArray());
+        $this->post($thread->path() . '/replies', $reply->toArray());
 
         // then their reply should be visible
         $this->get($thread->path())->assertSee($reply->body);
